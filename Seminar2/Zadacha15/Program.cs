@@ -3,9 +3,18 @@ Console.Clear();
 Console.Write("Введите номер дня недели: ");
 int num_day = int.Parse(Console.ReadLine());
 
-if (num_day == 6 || num_day == 7){
-    Console.WriteLine($"{num_day} -ой день недели выходной");
+if (num_day >=1 && num_day <=7)
+{
+    if (num_day == 6 || num_day == 7)
+    {
+        Console.WriteLine($"{num_day} -ой день недели выходной");
+    }
+    else
+    {
+        Console.WriteLine("Это рабочий день");
+    }
 }
-else{
-    Console.WriteLine("Это рабочий день");
+else 
+{
+    Console.WriteLine($"{num_day} Это не день недели");
 }
