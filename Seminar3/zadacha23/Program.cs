@@ -3,3 +3,10 @@
 3 -> 1, 8, 27
 5 -> 1, 8, 27, 64, 125
 */
+Console.Clear();
+Console.Write("Введите целое число: ");
+int N = int.Parse(Console.ReadLine());
+for (int i = 1; i <= N; i++)
+{
+    Console.WriteLine($"{i} в кубе = {Math.Pow(i, 3)}");
+}
