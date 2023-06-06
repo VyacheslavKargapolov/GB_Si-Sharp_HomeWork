@@ -23,7 +23,7 @@ double RaznostElements(double[] Arr)
 {
     double min = Arr[0];
     double max = Arr[1];
-    for (int i =2; i<Arr.Length; i+=1)
+    for (int i =2; i<Arr.Length; i++)
     {
         if (Arr[i] > max)
         {
