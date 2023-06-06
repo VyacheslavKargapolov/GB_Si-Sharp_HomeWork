@@ -9,7 +9,7 @@ int[] GetArray(int size)
     int[] arr = new int[size]; 
     for (int i = 0; i < size; i++)
     {
-        arr[i] = new Random().Next(-9, 10);
+        arr[i] = new Random().Next(-99, 100);
     }
     return arr;
 }
@@ -32,6 +32,7 @@ Console.Clear();
 Console.Write("Укажите размер массива: ");
 int size_Arr = int.Parse(Console.ReadLine());
 int[] array = GetArray(size_Arr); // создание массива из метода
+Console.WriteLine();
 Console.WriteLine($"[{String.Join(", ", array)}]"); // вывод созданного массива
 
 int rezult = SumElements(array); // получили сумму элементов на нечетных позициях в массиве array
