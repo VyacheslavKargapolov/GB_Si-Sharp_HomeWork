@@ -1,0 +1,15 @@
+/home/vyacheslav/Documents/GB_ucheba/tema3_C#/seminars/Domashka/GB_Si-Sharp_HomeWork/Seminar7/Zadacha47/bin/Debug/net6.0/Zadacha47
+/home/vyacheslav/Documents/GB_ucheba/tema3_C#/seminars/Domashka/GB_Si-Sharp_HomeWork/Seminar7/Zadacha47/bin/Debug/net6.0/Zadacha47.deps.json
+/home/vyacheslav/Documents/GB_ucheba/tema3_C#/seminars/Domashka/GB_Si-Sharp_HomeWork/Seminar7/Zadacha47/bin/Debug/net6.0/Zadacha47.runtimeconfig.json
+/home/vyacheslav/Documents/GB_ucheba/tema3_C#/seminars/Domashka/GB_Si-Sharp_HomeWork/Seminar7/Zadacha47/bin/Debug/net6.0/Zadacha47.dll
+/home/vyacheslav/Documents/GB_ucheba/tema3_C#/seminars/Domashka/GB_Si-Sharp_HomeWork/Seminar7/Zadacha47/bin/Debug/net6.0/ref/Zadacha47.dll
+/home/vyacheslav/Documents/GB_ucheba/tema3_C#/seminars/Domashka/GB_Si-Sharp_HomeWork/Seminar7/Zadacha47/bin/Debug/net6.0/Zadacha47.pdb
+/home/vyacheslav/Documents/GB_ucheba/tema3_C#/seminars/Domashka/GB_Si-Sharp_HomeWork/Seminar7/Zadacha47/obj/Debug/net6.0/Zadacha47.csproj.AssemblyReference.cache
+/home/vyacheslav/Documents/GB_ucheba/tema3_C#/seminars/Domashka/GB_Si-Sharp_HomeWork/Seminar7/Zadacha47/obj/Debug/net6.0/Zadacha47.GeneratedMSBuildEditorConfig.editorconfig
+/home/vyacheslav/Documents/GB_ucheba/tema3_C#/seminars/Domashka/GB_Si-Sharp_HomeWork/Seminar7/Zadacha47/obj/Debug/net6.0/Zadacha47.AssemblyInfoInputs.cache
+/home/vyacheslav/Documents/GB_ucheba/tema3_C#/seminars/Domashka/GB_Si-Sharp_HomeWork/Seminar7/Zadacha47/obj/Debug/net6.0/Zadacha47.AssemblyInfo.cs
+/home/vyacheslav/Documents/GB_ucheba/tema3_C#/seminars/Domashka/GB_Si-Sharp_HomeWork/Seminar7/Zadacha47/obj/Debug/net6.0/Zadacha47.csproj.CoreCompileInputs.cache
+/home/vyacheslav/Documents/GB_ucheba/tema3_C#/seminars/Domashka/GB_Si-Sharp_HomeWork/Seminar7/Zadacha47/obj/Debug/net6.0/Zadacha47.dll
+/home/vyacheslav/Documents/GB_ucheba/tema3_C#/seminars/Domashka/GB_Si-Sharp_HomeWork/Seminar7/Zadacha47/obj/Debug/net6.0/ref/Zadacha47.dll
+/home/vyacheslav/Documents/GB_ucheba/tema3_C#/seminars/Domashka/GB_Si-Sharp_HomeWork/Seminar7/Zadacha47/obj/Debug/net6.0/Zadacha47.pdb
+/home/vyacheslav/Documents/GB_ucheba/tema3_C#/seminars/Domashka/GB_Si-Sharp_HomeWork/Seminar7/Zadacha47/obj/Debug/net6.0/Zadacha47.genruntimeconfig.cache
