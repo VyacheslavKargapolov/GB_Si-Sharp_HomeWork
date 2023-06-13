@@ -30,7 +30,9 @@ void PrintArray(double [,] inArray)
     {
         for (int j = 0; j < inArray.GetLength(1); j++)
         {
-            Write($"{inArray[i, j]:f1}");
+            double a = Math.Round(inArray[i,j], 2);
+            //Write($"{inArray[i, j]:f1}");
+            Write($"{String.Format("{0,5}", a)} ");
         }
         WriteLine();
     }
