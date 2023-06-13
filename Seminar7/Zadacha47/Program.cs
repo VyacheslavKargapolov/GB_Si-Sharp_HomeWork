@@ -8,21 +8,39 @@ m = 3, n = 4.
 
 using System;
 using static System.Console;
-double [,] array = new double [3, 3];
-int minValue = -2;
-int maxValue = 5;
-void GetArray(double[,] InArr)
+
+double[,] GetArray(int m, int n, int minValue, int maxValue)
 {
-    for (int i =0; i<InArr.GetLength(0); i++)
+    double[,] result = new double[m, n];
+    for (int i = 0; i < m; i++)
     {
-        for(int j=0; j<InArr.GetLength(1); j++)
+        for (int j = 0; j < n; j++)
         {
-            InArr[i, j] = new Random().NextDouble() * (maxValue-minValue)+minValue;
-            Write($"{InArr[i, j]:f2} ");
+            result[i, j] = new Random().NextDouble()*(maxValue - minValue) + minValue;
+        }
+    }
+    return result;
+}
+
+
+
+void PrintArray(double [,] inArray)
+{
+    for (int i = 0; i < inArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < inArray.GetLength(1); j++)
+        {
+            Write($"{inArray[i, j]:f1}");
         }
         WriteLine();
     }
-    WriteLine();
 }
 
-GetArray(array);
+Clear();
+WriteLine("Введите число столбцов n: ");
+int n = Convert.ToInt32(ReadLine());
+WriteLine("Введите число строк m: ");
+int m = Convert.ToInt32(ReadLine());
+double[,] array = GetArray(m, n, -2, 3);
+PrintArray(array);
+WriteLine();
