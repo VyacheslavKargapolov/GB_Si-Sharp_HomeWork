@@ -9,24 +9,36 @@
 using System;
 using static System.Console;
 Clear();
-WriteLine("Введите количество строк первой матрицы: ");
-int A = int.Parse(ReadLine());
-WriteLine("Введите количество столбцов первой матрицы: ");
-int B = int.Parse(ReadLine());
-WriteLine("Введите количество строк второй матрицы: ");
-int C = int.Parse(ReadLine());
-WriteLine("Введите количество столбцов второй матрицы: ");
-int D = int.Parse(ReadLine());
+Write("Введите количество строк первой матрицы M: ");
+int m = int.Parse(ReadLine());
+Write("Введите количество столбцов первой матрицы N: ");
+int n = int.Parse(ReadLine());
+Write("Введите количество строк второй матрицы K: ");
+int k = int.Parse(ReadLine());
+Write("Введите количество столбцов второй матрицы L: ");
+int l = int.Parse(ReadLine());
 
-int[,] array = GetRandomArray(A, B, 0, 10);
+int[,] array = GetArray(m, n, 0, 10);
 PrintArray(array);
 WriteLine();
-int[,] array2 = GetRandomArray(C, D, 0, 10);
+
+int[,] array2 = GetArray(k, l, -5, 6);
 PrintArray(array2);
+WriteLine();
 
-PrintArray(GetRezultrray(array, array2));
 
-int[,] GetRandomArray(int a, int b, int minValue, int maxValue)
+
+if(m != l) //если количество строк первой матрицы не равно количеству столбцов второй матрицы, то сколярное произведение матриц не определено
+{
+    WriteLine("Нельзя найти произведение таких матриц");
+}
+else 
+{
+    WriteLine("Произведение матриц");
+    PrintArray(GetRezultArray(array, array2));
+}
+
+int[,] GetArray(int a, int b, int minValue, int maxValue)
 {
     int[,] result = new int[a, b];
     for (int i = 0; i < result.GetLength(0); i++)
@@ -47,20 +59,16 @@ void PrintArray(int[,] arr)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            Write($" {arr[i, j]} ");
+            Write($" {arr[i, j], 3} ");
         }
         WriteLine();
     }
 }
 WriteLine();
 
-if(A != D)
-{
-    WriteLine("Нельзя найти произведение таких матриц");
-}
 
 
-int [,] GetRezultrray(int [,] arr, int [,] arr2)
+int [,] GetRezultArray(int [,] arr, int [,] arr2)
 {
     int [,] result = new int [arr.GetLength(0), arr2.GetLength(1)];
     
