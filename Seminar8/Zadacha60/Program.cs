@@ -30,14 +30,14 @@ int [,,] GetArray(int a, int b, int c)
     int [,,] result = new int [a,b,c];
     for(int i = 0; i < result.GetLength(0); i++)
     {
-        for(int j = 0; j < result.GetLength(2); j++)
+        for(int j = 0; j < result.GetLength(1); j++)
         {
             int k = 0;
-            while(k < result.GetLength(1))
+            while(k < result.GetLength(2))
             {
                 int el = new Random().Next(10,100);
                 if(FindElement(result,el)) continue;
-                result[i,k,j] = el;
+                result[i,j,k] = el;
                 k++;
             }
         }
@@ -64,9 +64,9 @@ void PrintArray(int [,,] arr)
 {
     for(int i = 0; i < arr.GetLength(0); i++)
     {
-        for(int j = 0; j < arr.GetLength(1); j++)
+        for(int j = 0; j < arr.GetLength(2); j++)
         {
-            for(int k = 0; k < arr.GetLength(2); k++)
+            for(int k = 0; k < arr.GetLength(1); k++)
             {
                 Write($"{arr[i,j,k]}({i},{j},{k}) ");
             }
