@@ -28,7 +28,7 @@ int[,] GetArray(int a, int b)
     {
         count++;
         result[i, j] = count;
-        //идем вправо
+        //начинаем вправо от [0,0]
         if (left && top)
         {
             if (j == columnEnd)
@@ -45,7 +45,7 @@ int[,] GetArray(int a, int b)
                 continue;
             }
         }
-        //идем вниз
+        //шаги вниз
         if (!left && top)
         {
             if (i == rowEnd)
@@ -62,7 +62,7 @@ int[,] GetArray(int a, int b)
                 continue;
             }
         }
-        //идем влево
+        //шаги влево
         if (!left && !top)
         {
             if (j == columnStart)
@@ -79,7 +79,7 @@ int[,] GetArray(int a, int b)
                 continue;
             }
         }
-        //Идем вверх
+        //шаги вверх
         if (left && !top)
         {
             if (i == rowStart)
