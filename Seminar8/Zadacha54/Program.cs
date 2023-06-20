@@ -9,20 +9,18 @@
 8 4 4 2
 */
 
-using System;
-using static System.Console;
-
 Clear();
 Write("Введите количество строк массива: ");
 int rows = int.Parse(ReadLine());
 Write("Введите количество столбцов массива: ");
 int columns = int.Parse(ReadLine());
 
-int[,] array = GetArray(rows, columns,-10, 10);
+int[,] array = GetArray(rows, columns,10, 100);
 PrintArray(array);
 WriteLine();
 
-//SortedRow(array);
+int[,] SortArray = SortedRow(array);
+PrintArray(SortArray);
 WriteLine();
 
 int[,] GetArray(int m, int n, int min, int max) //метод создает двумерный массив
@@ -51,23 +49,22 @@ void PrintArray(int[,] inArray)  //метод выводит двумерный 
     }
 }
 
-void SortedRow(int[,] inArray)
+int[,] SortedRow(int[,] arr)
 {
-     for (int i = 0; i < inArray.GetLength(0); i++)
+    for (int y = 0; y < arr.GetLength(0) * arr.GetLength(1); y++)
     {
-        for (int j = 0; j < inArray.GetLength(1); j++)
+        for (int i = 0; i < arr.GetLength(0); i++)
         {
-           
-                int k = inArray[i, j+1];
-                if (inArray[i, j] < k)
+            for (int j = 0; j < arr.GetLength(1) - 1; j++)
+            {
+                if (arr[i, j] < arr[i, j + 1])
                 {
-                    int l = inArray[i, j];
-                    inArray[i, j] = k;
-                    k = l;
-                    Write(inArray[i,j]);
+                    int k = arr[i, j];
+                    arr[i, j] = arr[i, j + 1];
+                    arr[i, j + 1] = k;
                 }
-               
-        WriteLine();
+            }
         }
     }
+    return arr;
 }
