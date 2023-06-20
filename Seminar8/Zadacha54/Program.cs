@@ -9,6 +9,10 @@
 8 4 4 2
 */
 
+using System;
+using static System.Console;
+
+
 Clear();
 Write("Введите количество строк M: ");
 int m = int.Parse(ReadLine());
