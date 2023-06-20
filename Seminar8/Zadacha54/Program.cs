@@ -10,12 +10,12 @@
 */
 
 Clear();
-Write("Введите количество строк массива: ");
-int rows = int.Parse(ReadLine());
-Write("Введите количество столбцов массива: ");
-int columns = int.Parse(ReadLine());
+Write("Введите количество строк M: ");
+int m = int.Parse(ReadLine());
+Write("Введите количество столбцов N: ");
+int n = int.Parse(ReadLine());
 
-int[,] array = GetArray(rows, columns,10, 100);
+int[,] array = GetArray(m, n,10, 100);
 PrintArray(array);
 WriteLine();
 
@@ -49,7 +49,7 @@ void PrintArray(int[,] inArray)  //метод выводит двумерный 
     }
 }
 
-int[,] SortedRow(int[,] arr)
+int[,] SortedRow(int[,] arr) //Сортировка строк
 {
     for (int y = 0; y < arr.GetLength(0) * arr.GetLength(1); y++)
     {
