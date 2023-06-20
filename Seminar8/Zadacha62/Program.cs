@@ -9,18 +9,18 @@
 using System;
 using static System.Console;
 Clear();
-int a = 4;
-int b = 4;
+int m = 5;
+int n = 5;
 
 int[,] GetArray(int a, int b)
 {
     int[,] result = new int[a, b];
     int i = 0;
     int j = 0;
-    int rowE = a - 1;
-    int columnE = b - 1;
-    int rowS = 0;
-    int columnS = 0;
+    int rowEnd = a - 1;
+    int columnEnd = b - 1;
+    int rowStart = 0;
+    int columnStart = 0;
     bool left = true;
     bool top = true;
     int count = 0;
@@ -31,9 +31,9 @@ int[,] GetArray(int a, int b)
         //идем вправо
         if (left && top)
         {
-            if (j == columnE)
+            if (j == columnEnd)
             {
-                rowS++;
+                rowStart++;
                 top = true;
                 left = false;
                 i++;
@@ -48,9 +48,9 @@ int[,] GetArray(int a, int b)
         //идем вниз
         if (!left && top)
         {
-            if (i == rowE)
+            if (i == rowEnd)
             {
-                columnE--;
+                columnEnd--;
                 top = false;
                 left = false;
                 j--;
@@ -65,9 +65,9 @@ int[,] GetArray(int a, int b)
         //идем влево
         if (!left && !top)
         {
-            if (j == columnS)
+            if (j == columnStart)
             {
-                rowE--;
+                rowEnd--;
                 top = false;
                 left = true;
                 i--;
@@ -82,9 +82,9 @@ int[,] GetArray(int a, int b)
         //Идем вверх
         if (left && !top)
         {
-            if (i == rowS)
+            if (i == rowStart)
             {
-                columnS++;
+                columnStart++;
                 top = true;
                 left = true;
                 j++;
@@ -109,10 +109,11 @@ void PrintArray(int[,] arr)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            Write($"{arr[i, j]} ");
+            Write($"{arr[i, j], 3} ");
         }
         WriteLine();
     }
 }
 
-PrintArray(GetArray(a, b));
+PrintArray(GetArray(m, n));
+ WriteLine();
