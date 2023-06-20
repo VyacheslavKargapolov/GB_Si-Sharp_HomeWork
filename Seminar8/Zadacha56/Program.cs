@@ -4,14 +4,16 @@ using System;
 using static System.Console;
 Clear();
 
-Write("Введите количество строк: ");
+Write("Введите количество строк M: ");
 int m = int.Parse(ReadLine());
-Write("Введите количество столбцов: ");
+Write("Введите количество столбцов N: ");
 int n = int.Parse(ReadLine());
+
 int[,] array = GetArray(m, n);
 PrintArray(array);
 
-WriteLine($"Строка с наименьшей суммой - {GetRowNumber(array)} сверху");
+WriteLine($"Строка с наименьшей суммой - {GetRowNumber(array)}");
+
 
 int[,] GetArray(int m, int n)
 {
@@ -22,7 +24,6 @@ int[,] GetArray(int m, int n)
         {
             result[i, j] = new Random().Next(-5, 10);
         }
-
     }
     return result;
 }
@@ -58,7 +59,7 @@ int GetRowNumber (int [,] array)
         if (minsum > sum)
         {
             minsum = sum;
-            row = i + 1;
+            row = i;
         }
     }
     return row;
