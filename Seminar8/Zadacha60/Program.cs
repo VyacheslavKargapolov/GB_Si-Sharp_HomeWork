@@ -8,6 +8,7 @@
 
 using System;
 using static System.Console;
+
 Clear();
 int minValue = 4;
 int maxValue = 6;
@@ -23,6 +24,7 @@ if(a*b*c > 90)
 int [,,] array = GetArray(a,b,c);
 Console.WriteLine();
 PrintArray(array);
+
 int [,,] GetArray(int a, int b, int c)
 {
     int [,,] result = new int [a,b,c];
@@ -43,7 +45,7 @@ int [,,] GetArray(int a, int b, int c)
     return result;
 }
 
-bool FindElement(int[,,] array, int el)
+bool FindElement(int[,,] array, int el) // Подсмотрел, но разобрался как работает ))
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
